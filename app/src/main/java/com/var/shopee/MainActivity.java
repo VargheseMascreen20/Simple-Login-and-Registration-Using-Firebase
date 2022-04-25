@@ -24,7 +24,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
     TextView signUpBtn, forgotPassBtn;
     EditText mEmail, mPassword;
-    Button loginBtn;
+    Button loginBtn, otpLoginBtn;
+
 
     FirebaseAuth fAuth;
 
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mEmail = findViewById(R.id.emailTxt);
         mPassword = findViewById(R.id.passTxt);
         signUpBtn = findViewById(R.id.signUpBtn);
+        otpLoginBtn = findViewById(R.id.otpLogin);
 
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 String password = mPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
-                    mEmail.setError("Email is Required.");
                     return;
                 }
                 if (email.length() >= 40) {
@@ -136,6 +137,14 @@ public class MainActivity extends AppCompatActivity {
 
                 passwordResetDialog.create().show();
 
+            }
+        });
+        otpLoginBtn = findViewById(R.id.otpLogin);
+        otpLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent otp = new Intent(MainActivity.this, VerifyOtpLogin.class);
+                startActivity(otp);
             }
         });
     }

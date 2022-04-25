@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopee">
         <activity
+            android:name=".VerifyOtpLogin"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

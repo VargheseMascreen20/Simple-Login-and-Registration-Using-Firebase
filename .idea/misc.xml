@@ -6,8 +6,9 @@
         <entry key="..\:/Users/vargh/Shopee/app/src/main/res/drawable/gradient.xml" value="0.2345" />
         <entry key="..\:/Users/vargh/Shopee/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/vargh/Shopee/app/src/main/res/layout/activity_home.xml" value="0.16" />
-        <entry key="..\:/Users/vargh/Shopee/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/vargh/Shopee/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/vargh/Shopee/app/src/main/res/layout/activity_sign_up.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/vargh/Shopee/app/src/main/res/layout/activity_verify_otp_login.xml" value="0.25677083333333334" />
       </map>
     </option>
   </component>
