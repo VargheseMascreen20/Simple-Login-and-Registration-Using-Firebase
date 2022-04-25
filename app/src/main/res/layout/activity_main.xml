@@ -30,7 +30,6 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="180dp"
         android:fontFamily="@font/pacifico"
         android:gravity="left"
         android:text="Welcome back!!"
@@ -38,7 +37,7 @@
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,10 +48,10 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appName"
-        app:layout_constraintVertical_bias="0.411">
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
+        app:layout_constraintVertical_bias="0.457">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/EmailTxt"
@@ -94,6 +93,7 @@
             android:layout_width="360dp"
             android:layout_height="64dp"
             android:layout_marginTop="24dp"
+            android:elevation="24dp"
             android:fontFamily="@font/pacifico"
             android:text="Login"
             android:textStyle="bold" />
@@ -105,6 +105,46 @@
             android:layout_gravity="right"
             android:layout_marginTop="4dp"
             android:text="Forgot password?"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="16dp"
+                app:dividerInsetEnd="16dp"
+                app:dividerInsetStart="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="or" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                app:dividerInsetEnd="16dp"
+                app:dividerInsetStart="16dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/otpLogin"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:text="OTP LOGIN"
             android:textColor="@color/white" />
 
         <LinearLayout
