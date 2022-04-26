@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+    <!--Edittext for getting users phone number-->
+
+    <!--Button for getting OTP-->
+
+    <!--Edittext for getting otp from user-->
+
+    <!--button for verifying user OTP-->
+
+    <TextView
+
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/pacifico"
+        android:text="OTP LOGIN"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.296">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idEdtPhoneNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter your Phone Number"
+            app:boxStrokeColor="@color/white"
+            app:counterMaxLength="10"
+            app:endIconMode="clear_text"
+            app:prefixText="+91">
+
+            <EditText
+                android:id="@+id/idEdtPhoneNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/idBtnGetOtp"
+            android:layout_width="339dp"
+            android:layout_height="74dp"
+            android:layout_below="@id/idEdtPhoneNumber"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Get OTP"
+            android:textAllCaps="false"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/countTime"
+            android:layout_width="118dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="2.5"
+            android:autoSizeTextType="uniform"
+            android:textColor="#CCCCCC"
+            android:visibility="invisible" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idEdtOtp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="Enter OTP"
+            app:boxStrokeColor="@color/white"
+            app:counterMaxLength="10"
+            app:endIconMode="clear_text">
+
+            <EditText
+                android:id="@+id/idEdtOtp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idBtnGetOtp"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/idBtnVerify"
+            android:layout_width="339dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:text="Verify OTP"
+            android:textAllCaps="false"
+            android:textSize="16dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
